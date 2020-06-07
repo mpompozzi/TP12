@@ -131,12 +131,14 @@ int input(void) {
     return res;
 }
 
-void printPort(char puerto) {
+void printPort(char puerto) 
+{
     int i = 0;
 
     printf("|");
 
-    for (i = 0; i <= 7; i++) {
+    for (i = 0; i <= 7; i++) 
+    {
 
         if (bitGet(i, puerto)) //Si bitGet devuelve 1, porque el bit esta prendido
         {
