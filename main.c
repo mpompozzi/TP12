@@ -34,7 +34,7 @@ int main(void)
     fptr= fopen ();
     if (fptr == NULL)
     {
-        printf ("Error, no se cargo ")
+        printf ("Error, no se cargo el pin")
 
     maskOff(mask, puerto);  //Apago todos los bit del puerto 
 
