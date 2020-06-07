@@ -1,5 +1,6 @@
 #include "hardware.h"
 #include "stdio.h"
+#include "stdbool.h"
 
 
 void RPI_export_pin(void)
@@ -7,7 +8,7 @@ void RPI_export_pin(void)
     
 }
 
-void RPI_set_direction(void)
+void RPI_set_direction(bool dir)
 {
     
 }
