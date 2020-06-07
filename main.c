@@ -75,14 +75,14 @@ int main(void) {
                 maskToggle(mask, puerto); // prende los bits apagados y apaga los prendidos
             };
                 break;
-        }
-        case 'i':
-        case 'I':
-        {
-            printInstructions(); // imprimo nuevamente las instrucciones
-        };
-        break;
 
+            case 'i':
+            case 'I':
+            {
+                printInstructions(); // imprimo nuevamente las instrucciones
+            };
+                break;
+        }
     }
 
     printPort(puerto); //Imprimo el puerto
