@@ -15,6 +15,7 @@ void RPI_export_pin(void)
     
         exported = fputs(leds[i],handle_export);
         fclose(handle_export);
+        
     }
 }
 
