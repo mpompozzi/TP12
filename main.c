@@ -92,6 +92,7 @@ int main(void)
 
 }
 printf("Termino el programa\n"); //Se presiono q y termina el programa
+fclose (fptr);
 
 return 0;
 }
