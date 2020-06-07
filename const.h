@@ -20,11 +20,7 @@
 #define MASK16 0X0001
 #define QUIT -2
 
-#define ALTO 150
-#define ANCHO 420
-#define DIST 50
 
-#define FPS    60.0
 
 #endif /* CONST_H */
 
