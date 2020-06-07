@@ -24,22 +24,28 @@ void printInstructions(void);
 /*
  * 
  */
-int main(void) {
-    char puerto = 'a'; //Inicializo en el puerto A
-    int mask = 0xFF; //Inicializo la mascara en 11111111b
-    int var = -3; //Inicializo la variable con un valor que no interfiera con las funciones
-
-
-    maskOff(mask, puerto); //Apago todos los bit del puerto 
-
-    printInstructions(); //Imprimo las instrucciones
-
-    printPort(puerto); //Imprimo el puerto
-
-
-    while (var != QUIT) //Mientras no se presiones q
+int main(void) 
+{
+    char puerto = 'a';  //Inicializo en el puerto A
+    int mask = 0xFF;    //Inicializo la mascara en 11111111b
+    int var = -3;       //Inicializo la variable con un valor que no interfiera con las funciones
+    FILE* fptr;
+    
+    fptr= fopen ();
+    if (fptr == NULL)
     {
-        var = input(); //Consigo el valor del input
+        printf ("Error, no se cargo ")
+
+    maskOff(mask, puerto);  //Apago todos los bit del puerto 
+
+    printInstructions();    //Imprimo las instrucciones
+
+    printPort(puerto);      //Imprimo el puerto
+
+
+    while (var != QUIT)     //Mientras no se presiones q
+    {
+        var = input();      //Consigo el valor del input
 
         switch (var) {
             case 0:
