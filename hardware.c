@@ -2,10 +2,11 @@
 #include "stdio.h"
 
 
-   void RPI_export_pin(void)
+void RPI_export_pin(void)
 {
     
 }
+
 void RPI_set_direction(void)
 {
     
