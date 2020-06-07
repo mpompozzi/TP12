@@ -1,7 +1,7 @@
 #include "hardware.h"
 #include "stdio.h"
 
-{
+
    void RPI_export_pin(void)
 {
     
@@ -19,4 +19,3 @@ void RPI_unexport_pin(void)
 {
     
 } 
-}
