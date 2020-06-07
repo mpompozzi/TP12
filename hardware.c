@@ -18,7 +18,7 @@ void RPI_export_pin(void)
         
     }
     
-    for(int i=0,i>8,i++){
+    for(int i=0,i<8,i++){
     
         exported = fputs(leds[i],handle_export);
         fclose(handle_export);
