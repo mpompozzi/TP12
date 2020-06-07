@@ -24,28 +24,25 @@ void printInstructions(void);
 /*
  * 
  */
-int main(void) 
-{
-    char puerto = 'a';  //Inicializo en el puerto A
-    int mask = 0xFF;    //Inicializo la mascara en 11111111b
-    int var = -3;       //Inicializo la variable con un valor que no interfiera con las funciones
+int main(void) {
+    char puerto = 'a'; //Inicializo en el puerto A
+    int mask = 0xFF; //Inicializo la mascara en 11111111b
+    int var = -3; //Inicializo la variable con un valor que no interfiera con las funciones
     FILE* fptr;
-    
-    fptr= fopen ();
-    if (fptr == NULL)
+
+    RPI_export_pin();
+    RPI_set_direction();
+
+    maskOff(mask, puerto); //Apago todos los bit del puerto 
+
+    printInstructions(); //Imprimo las instrucciones
+
+    printPort(puerto); //Imprimo el puerto
+
+
+    while (var != QUIT) //Mientras no se presiones q
     {
-        printf ("Error, no se cargo el pin")
-
-    maskOff(mask, puerto);  //Apago todos los bit del puerto 
-
-    printInstructions();    //Imprimo las instrucciones
-
-    printPort(puerto);      //Imprimo el puerto
-
-
-    while (var != QUIT)     //Mientras no se presiones q
-    {
-        var = input();      //Consigo el valor del input
+        var = input(); //Consigo el valor del input
 
         switch (var) {
             case 0:
@@ -89,10 +86,12 @@ int main(void)
     }
 
     printPort(puerto); //Imprimo el puerto
-
+    RPI_print_led();
 }
+
+RPI_unexport_pin();
 printf("Termino el programa\n"); //Se presiono q y termina el programa
-fclose (fptr);
+
 
 return 0;
 }
@@ -110,7 +109,7 @@ int input(void) {
             res *= 10;
             res = (c - '0'); // lo almaceno en res pasandolo a int y aumento el contador  
             conta++;
-        }            //Si es una de las letras para los comandos
+        }//Si es una de las letras para los comandos
         else if (c == 't' || c == 'T' || c == 'c' || c == 'C' || c == 's' || c == 'S' || c == 'i' || c == 'I') {
             conta++; //Aumento el contador
             res = c; //La almaceno en res
@@ -138,14 +137,12 @@ int input(void) {
     return res;
 }
 
-void printPort(char puerto) 
-{
+void printPort(char puerto) {
     int i = 0;
 
     printf("|");
 
-    for (i = 0; i <= 7; i++) 
-    {
+    for (i = 0; i <= 7; i++) {
 
         if (bitGet(i, puerto)) //Si bitGet devuelve 1, porque el bit esta prendido
         {
