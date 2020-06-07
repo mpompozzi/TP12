@@ -24,11 +24,10 @@ void RPI_export_pin(void);
 /*******************************************************************************
  * Función: RPI_set_direction
  * Descripcción: Fija en que direccion deseo que esten seteados los pines
- * Param:1-entrada|0-salida
  * 
  ******************************************************************************/
 
-void RPI_set_direction(bool dir);
+void RPI_set_direction(void);
 
 /*******************************************************************************
  * Función: RPI_print_led
