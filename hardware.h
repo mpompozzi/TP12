@@ -13,17 +13,18 @@
 
 #ifndef HARDWARE_H
 #define HARDWARE_H
+/*******************************************************************************
+ * Funcion:RPI_export_pin
+ * Descripcción: Realiza un 
+ * 
+ ******************************************************************************/
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+void RPI_export_pin(void);
 
+void RPI_set_direction(void);
 
+void RPI_print_led(void);
 
-
-#ifdef __cplusplus
-}
-#endif
-
+void RPI_unexport_pin(void);
 #endif /* HARDWARE_H */
 
