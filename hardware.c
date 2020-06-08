@@ -400,8 +400,12 @@ void RPI_print_led(void) {
                     fprintf(stderr, "No se pudo abrir");
                     exit(1);
                 }
-                if (bitGet(i, 'A')) {
-                } else {
+                if (bitGet(i, 'A')) 
+                {
+                    fputc('1' ,handle_export);
+                } else 
+                {
+                    fputc('0' ,handle_export);    
                 }
                 fclose(handle_export);
             };
@@ -413,8 +417,12 @@ void RPI_print_led(void) {
                     fprintf(stderr, "No se pudo abrir");
                     exit(1);
                 }
-                if (bitGet(i, 'A')) {
-                } else {
+                if (bitGet(i, 'A')) 
+                {
+                    fputc('1' ,handle_export);
+                } else 
+                {
+                    fputc('0' ,handle_export);    
                 }
                 fclose(handle_export);
             };
@@ -426,8 +434,12 @@ void RPI_print_led(void) {
                     fprintf(stderr, "No se pudo abrir");
                     exit(1);
                 }
-                if (bitGet(i, 'A')) {
-                } else {
+                if (bitGet(i, 'A')) 
+                {
+                    fputc('1' ,handle_export);
+                } else 
+                {
+                    fputc('0' ,handle_export);    
                 }
                 fclose(handle_export);
             };
@@ -439,8 +451,12 @@ void RPI_print_led(void) {
                     fprintf(stderr, "No se pudo abrir");
                     exit(1);
                 }
-                if (bitGet(i, 'A')) {
-                } else {
+                if (bitGet(i, 'A')) 
+                {
+                    fputc('1' ,handle_export);
+                } else 
+                {
+                    fputc('0' ,handle_export);    
                 }
                 fclose(handle_export);
             };
@@ -452,8 +468,12 @@ void RPI_print_led(void) {
                     fprintf(stderr, "No se pudo abrir");
                     exit(1);
                 }
-                if (bitGet(i, 'A')) {
-                } else {
+                if (bitGet(i, 'A')) 
+                {
+                    fputc('1' ,handle_export);
+                } else 
+                {
+                    fputc('0' ,handle_export);    
                 }
                 fclose(handle_export);
             };
@@ -465,8 +485,12 @@ void RPI_print_led(void) {
                     fprintf(stderr, "No se pudo abrir");
                     exit(1);
                 }
-                if (bitGet(i, 'A')) {
-                } else {
+                if (bitGet(i, 'A')) 
+                {
+                    fputc('1' ,handle_export);
+                } else 
+                {
+                    fputc('0' ,handle_export);    
                 }
                 fclose(handle_export);
             };
@@ -478,8 +502,12 @@ void RPI_print_led(void) {
                     fprintf(stderr, "No se pudo abrir");
                     exit(1);
                 }
-                if (bitGet(i, 'A')) {
-                } else {
+                if (bitGet(i, 'A')) 
+                {
+                    fputc('1' ,handle_export);
+                } else 
+                {
+                    fputc('0' ,handle_export);    
                 }
                 fclose(handle_export);
             };
@@ -491,8 +519,12 @@ void RPI_print_led(void) {
                     fprintf(stderr, "No se pudo abrir");
                     exit(1);
                 }
-                if (bitGet(i, 'A')) {
-                } else {
+               if (bitGet(i, 'A')) 
+                {
+                    fputc('1' ,handle_export);
+                } else 
+                {
+                    fputc('0' ,handle_export);    
                 }
                 fclose(handle_export);
             };
