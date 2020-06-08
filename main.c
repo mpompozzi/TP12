@@ -24,7 +24,8 @@ void printInstructions(void);
 /*
  * 
  */
-int main(void) {
+int main(void) 
+{
     char puerto = 'a'; //Inicializo en el puerto A
     int mask = 0xFF; //Inicializo la mascara en 11111111b
     int var = -3; //Inicializo la variable con un valor que no interfiera con las funciones
@@ -44,7 +45,8 @@ int main(void) {
     {
         var = input(); //Consigo el valor del input
 
-        switch (var) {
+        switch (var) 
+        {
             case 0:
             case 1:
             case 2:
@@ -54,49 +56,51 @@ int main(void) {
             case 6:
             case 7:
             {
-                bitToggle(var, puerto); //Cambio el estado de un bit al contrario
+                bitToggle(var, puerto);     //Cambio el estado de un bit al contrario
             };
                 break;
             case 's':
             case 'S':
             {
-                maskOn(mask, puerto); // prendo todos los bits
+                maskOn(mask, puerto);       // prendo todos los bits
             };
                 break;
             case 'c':
             case 'C':
             {
-                maskOff(mask, puerto); // apago todos kos bit
+                maskOff(mask, puerto);      // apago todos los bit
             };
                 break;
             case 't':
             case 'T':
             {
-                maskToggle(mask, puerto); // prende los bits apagados y apaga los prendidos
+                maskToggle(mask, puerto);   // prende los bits apagados y apaga los prendidos
             };
                 break;
 
             case 'i':
             case 'I':
             {
-                printInstructions(); // imprimo nuevamente las instrucciones
+                printInstructions();        // imprimo nuevamente las instrucciones
             };
                 break;
         }
+    
+
+    printPort(puerto);                      //Imprimo el puerto
+    RPI_print_led();
     }
 
-    printPort(puerto); //Imprimo el puerto
-    RPI_print_led();
-}
-
 RPI_unexport_pin();
-printf("Termino el programa\n"); //Se presiono q y termina el programa
+
+printf ("Termino el programa\n");        //Se presiono q y termina el programa
 
 
 return 0;
 }
 
-int input(void) {
+int input(void) 
+{
     int c = 0;
     int conta = 0;
     int out = 0; //Flag para q
