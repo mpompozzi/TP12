@@ -13,6 +13,10 @@
 
 #ifndef HARDWARE_H
 #define HARDWARE_H
+
+// Microsegundos a milisegundos
+#define USEC2MS(n) ((n)*1000)
+
 /*******************************************************************************
  * Función: RPI_export_pin
  * Descripcción: Realiza un export en los puertos de la Raspberry para su poste-

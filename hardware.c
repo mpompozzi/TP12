@@ -4,7 +4,7 @@
 #include <string.h>
 #include "hardware.h"
 #include "PortControl.h"
-
+#include <unistd.h>
 
 //char leds[LEDS] = {"27", "22", "25", "24", "23", "18", "4", "17"};
 
@@ -40,6 +40,9 @@ void RPI_export_pin(void) {
         printf("EXPORT File opened succesfully \n");
 
     fclose(handle_export);
+    
+    // Delay de 100 ms
+    usleep(USEC2MS(100));
     /******************************LED 1********************************/
     //Exportamos pin:
     if ((handle_export = fopen("/sys/class/gpio/export", "w")) == NULL) {
@@ -54,6 +57,8 @@ void RPI_export_pin(void) {
         printf("EXPORT File opened succesfully \n");
 
     fclose(handle_export);
+    // Delay de 100 ms
+    usleep(USEC2MS(100));
     /******************************LED 2********************************/
     //Exportamos pin:
     if ((handle_export = fopen("/sys/class/gpio/export", "w")) == NULL) {
@@ -68,6 +73,8 @@ void RPI_export_pin(void) {
         printf("EXPORT File opened succesfully \n");
 
     fclose(handle_export);
+    // Delay de 100 ms
+    usleep(USEC2MS(100));
     /******************************LED 3********************************/
     //Exportamos pin:
     if ((handle_export = fopen("/sys/class/gpio/export", "w")) == NULL) {
@@ -82,6 +89,8 @@ void RPI_export_pin(void) {
         printf("EXPORT File opened succesfully \n");
 
     fclose(handle_export);
+    // Delay de 100 ms
+    usleep(USEC2MS(100));
     /******************************LED 4********************************/
     //Exportamos pin:
     if ((handle_export = fopen("/sys/class/gpio/export", "w")) == NULL) {
@@ -96,6 +105,8 @@ void RPI_export_pin(void) {
         printf("EXPORT File opened succesfully \n");
 
     fclose(handle_export);
+    // Delay de 100 ms
+    usleep(USEC2MS(100));
     /******************************LED 5********************************/
     //Exportamos pin:
     if ((handle_export = fopen("/sys/class/gpio/export", "w")) == NULL) {
@@ -110,6 +121,8 @@ void RPI_export_pin(void) {
         printf("EXPORT File opened succesfully \n");
 
     fclose(handle_export);
+    // Delay de 100 ms
+    usleep(USEC2MS(100));
     /******************************LED 6********************************/
     //Exportamos pin:
     if ((handle_export = fopen("/sys/class/gpio/export", "w")) == NULL) {
@@ -124,6 +137,8 @@ void RPI_export_pin(void) {
         printf("EXPORT File opened succesfully \n");
 
     fclose(handle_export);
+    // Delay de 100 ms
+    usleep(USEC2MS(100));
     /******************************LED 7********************************/
     //Exportamos pin:
     if ((handle_export = fopen("/sys/class/gpio/export", "w")) == NULL) {
@@ -138,6 +153,8 @@ void RPI_export_pin(void) {
         printf("EXPORT File opened succesfully \n");
 
     fclose(handle_export);
+    // Delay de 100 ms
+    usleep(USEC2MS(100));
     /******************************FIN LEDS******************************/
 }//Esta funcion verifica que todos los pines esten correctamente conectados 
 
